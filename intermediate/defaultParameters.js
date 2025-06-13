@@ -15,4 +15,4 @@ const defaultParameters =(count=false)=>{
         }
     }
 }
-console.log(defaultParameters(1));
+console.log(defaultParameters(0));
