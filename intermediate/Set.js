@@ -18,3 +18,11 @@ console.log(Fruits.has("Apple"))
 // for(let [item] of Fruits){
 //     console.log(item)
 // }  can't iterate by this in Set() [item]
+
+
+const str ='helloo';
+let setstr =new Set(str)
+for (let value of setstr) {
+    console.log(value);
+}
+
