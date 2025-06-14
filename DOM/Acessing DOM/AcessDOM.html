@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="karthickRamAlagar"/>
+    <title>ACESSING Document OBJECT MODEL</title>
+    <style>
+        h1,h2,h3,h4,h5{
+            border:1px solid #ccc;
+            padding:10px;
+            max-width:400px;
+            box-shadow:0.5px 0.5px 2px 2px #ccc
+        }
+    </style>
+</head>
+<body>
+    <h1>getElementByTagName</h1>
+    <h2 id="main">getElementById</h2>
+    <h3 class="cls">getElementByClassName</h3>
+    <h4 class="cls" id="id-1">querSelector</h4>
+    <ul>
+        querySelectorAll()
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        // DOM SELECTORS
+// 1.getElementsByTagName    
+ console.log(document.getElementsByTagName("h1"))
+// 2.getElementsById
+console.log(document.getElementById("main").innerText)
+// 3.getElementByClassName
+console.log(document.getElementsByClassName("cls"))
+// 4.querySelector()
+console.log(document.querySelector("h1"));// acessing the tag name by querySelector
+console.log(document.querySelector(".cls"));// acessing the class name by querySelector
+console.log(document.querySelector("#id-1"));// acessing the id  name by querySelector
+// it return first match of the query
+// 5.querySelectorAll()
+console.log(document.querySelectorAll(".cls"));// acessing the class name by querySelector
+// it returns all match of the query
+
+//Storing the data in variables
+const li =  document.querySelectorAll("li");
+console.log(li)
+    </script>
+</body>
+</html>

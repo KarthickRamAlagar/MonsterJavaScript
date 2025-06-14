@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acessing Text</title>
+  </head>
+  <body>
+    <p class="first">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo dolorem rem
+      ab laboriosam dolor iste perspiciatis labore delectus nihil ea eligendi
+      ducimus et soluta dignissimos, nobis cumque sed
+      <strong> consectetur quidem</strong>. Eaque nihil iste explicabo unde
+      dolore dolor architecto modi earum repudiandae
+      <script>
+        console.log("RamAlagar Here");
+      </script>
+      quisquam, vitae nesciunt quibusdam, corporis expedita numquam reiciendis
+      dolores?
+      innerText
+    </p>
+
+    <h1 class="second">Hello World
+            Hello
+             World textContent
+            
+    </h1>
+    <p class="third">THESE IS PARAGRAPH 
+        <span>Hello
+
+        </span><strong>innerHTML</strong></p>
+
+    <script>
+        // chck the inner text first element
+
+        const first = document.querySelector(".first")
+        console.log(first.innerText)
+        // check the textcontent of second element
+       const second =document.querySelector(".second")
+       console.log(second.textContent);
+        // check the innerHTML of third Element 
+        const third = document.querySelector(".third")
+        console.log(third.innerHTML)
+    </script>
+  </body>
+</html>
+<!-- innerText ->  DO FORMAT THE RETURN TEXT -->
+<!-- textContent -> Does not   FORMAT THE RETURN TEXT  -->
+
+
+<!-- innerText - returns the all the text without any nested tag  -->
+<!-- innerHTML -return the all the text with neseted tage  and does not format the return text  -->
