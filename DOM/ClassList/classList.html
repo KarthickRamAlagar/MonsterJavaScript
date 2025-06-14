@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassList -DOM</title>
+    <style>
+    .styles{
+        color:crimson;
+        font-weight:normal;
+        font-family:sans-serif;
+        text-decoration:underline 
+    }
+    </style>
+</head>
+<body>
+    <h1 class="apple">Hello World</h1>
+    <script>
+        //classList
+        const h1 = document.querySelector("h1")
+        console.log(h1.classList)
+        //Adding classList
+        h1.classList.add("styles")
+        // remove the classList
+        h1.classList.remove("styles")
+        //toggle
+        h1.classList.toggle("apple")
+</script>
+</body>
+</html>

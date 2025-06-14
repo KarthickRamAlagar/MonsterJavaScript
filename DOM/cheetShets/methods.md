@@ -1,3 +1,5 @@
+
+
 # 📚 DOM Selectors in JavaScript
 Learn how to select and access elements in the DOM using different selector methods.
 
@@ -100,6 +102,7 @@ const li = document.querySelectorAll("li");
 console.log(li);
 ```
 ---
+
 # 📄 Accessing the Text in DOM Elements
 
 | Property      | Description                                         | Formats Text | Includes Nested Tags | Example Return                |
@@ -116,3 +119,99 @@ console.log(li);
 - **`innerHTML`**: Returns the HTML string, including tags.
 
 ---
+# 📚 DOM ClassList Methods
+
+---
+Learn how to work with classes on DOM elements using the `classList` property and its methods.
+
+---
+
+## 1. `classList`
+
+**Definition:**  
+The `classList` property returns a live DOMTokenList collection of the class attributes of the element.
+
+**Syntax:**
+```javascript
+element.classList
+```
+
+**Example:**
+```javascript
+const h1 = document.querySelector("h1");
+console.log(h1.classList);
+```
+---
+
+## 2. `classList.add()`
+
+**Definition:**  
+Adds the specified class value to the element.
+
+**Syntax:**
+```javascript
+element.classList.add("className")
+```
+
+**Example:**
+```javascript
+h1.classList.add("styles");
+```
+---
+
+## 3. `classList.remove()`
+
+**Definition:**  
+Removes the specified class value from the element.
+
+**Syntax:**
+```javascript
+element.classList.remove("className")
+```
+
+**Example:**
+```javascript
+h1.classList.remove("styles");
+```
+---
+
+## 4. `classList.toggle()`
+
+**Definition:**  
+Toggles the existence of a class value; adds it if not present, removes it if present.
+
+**Syntax:**
+```javascript
+element.classList.toggle("className")
+```
+
+**Example:**
+```javascript
+h1.classList.toggle("apple");
+```
+---
+
+## Full Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM classList Example</title>
+</head>
+<body>
+    <h1 class="apple">Hello World</h1>
+    <script>
+        // classList
+        const h1 = document.querySelector("h1");
+        console.log(h1.classList);
+        // Adding classList
+        h1.classList.add("styles");
+        // Remove the classList
+        h1.classList.remove("styles");
+        // Toggle
+        h1.classList.toggle("apple");
+    </script>
+</body>
+</html>
+```

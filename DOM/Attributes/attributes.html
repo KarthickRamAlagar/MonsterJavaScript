@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Setting Attributes</title>
+</head>
+<body>
+    <a href="https://github.com">Github</a>
+    <input type="text">
+    <script>
+       
+        const anchor = document.querySelector("a");
+        const input= document.querySelector("input")
+         //gettiing attribute value(href)
+        console.log(anchor.href)
+        // setting the  new attribute value
+        console.log(anchor.href="www.Zoho.com")
+        //methods
+        //getAttribute(attrName) that attribute itself
+        console.log(input.getAttribute("type"))
+        //setting the attribute
+        //syntax setAttribut("Attribute_name", "Attribute_value")
+        console.log(input.setAttribute("placeholder","Password"))
+        console.log(input.getAttribute("placeholder"))
+
+    </script>
+</body>
+</html>

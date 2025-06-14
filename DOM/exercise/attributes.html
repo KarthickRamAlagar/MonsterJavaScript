@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+</head>
+<body>
+    
+   <a class="a-two">Udemy</a>
+   <input type="text">
+   <a href="https://twitter.com">Twitter</a>
+   <script>
+    // select the anchor tag
+    //use getAttribute(attrName) to check the attribute
+    //Select a-two & set "href" attribute
+    //setAttribute(attrName,value)
+
+    const a = document.querySelector("a[href]")
+    console.log(a.getAttribute("href"))
+    const a_two = document.querySelector("a")
+    console.log(a_two.classList)
+    console.log(a.setAttribute("href","https://zoho.com"))
+    console.log(a.getAttribute("href"))
+    //You are getting undefined because the setAttribute method in JavaScript does not return any value.
+   </script> 
+</body>
+</html>
