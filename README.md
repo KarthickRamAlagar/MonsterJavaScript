@@ -2,9 +2,7 @@
 <div align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Banner" style="height: 270px; width:350px; padding-left:15px">
 </div>
-
-[Author's GitHub Profile](https://github.com/KarthickRamAlagar)
-
+  <a href="https://github.com/KarthickRamAlagar" style="align-self: center; margin-left: 10px;">Author's GitHub Profile</a>
 This repository contains a comprehensive guide to mastering JavaScript, covering topics from the basics to advanced concepts, including DOM manipulation and modern JavaScript techniques.
 
 ---
