@@ -40,3 +40,7 @@ console.log(jsonString);
 //parse -> converts a JSON string into a JavaScript object
 const jsonObject = JSON.parse(jsonString);
 console.log(jsonObject);
+
+// json string example
+// "lable": "value" - json string 
+// label:"value" - js objects (normal string)
