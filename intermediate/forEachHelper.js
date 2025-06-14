@@ -1,6 +1,7 @@
 // when we call the forEach helper , we pass the anonymous callback function ,
 // this function will  gets called one time for every elemnt in the array
 // it takes three parameters like 1.variable, 2.index, 3.original array(optional)
+// it doenot create the new array for the resulted values 
 
 const colors=["green", "yellow","purple"];
 
