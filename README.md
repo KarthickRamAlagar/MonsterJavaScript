@@ -1,6 +1,6 @@
 # JavaScript Mastery Repository
 <div align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Banner" style="height: 300px; width:350px; padding-left:15px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Banner" style="height: 270px; width:350px; padding-left:15px">
 </div>
 
 [Author's GitHub Profile](https://github.com/KarthickRamAlagar)
