@@ -1,0 +1,65 @@
+🟢1. Basic Info & Conversion**
+
+| Method          | Description                      | Example                     |
+| --------------- | -------------------------------- | --------------------------- |
+| `length`        | Returns string length            | `'Hi'.length → 2`           |
+| `charAt(index)` | Returns character at index       | `'Hi'.charAt(1) → 'i'`      |
+| `charCodeAt(i)` | Returns UTF-16 code              | `'A'.charCodeAt(0) → 65`    |
+| `toUpperCase()` | Convert to uppercase             | `'hi'.toUpperCase() → 'HI'` |
+| `toLowerCase()` | Convert to lowercase             | `'HI'.toLowerCase() → 'hi'` |
+| `trim()`        | Remove spaces from both ends     | `' hi '.trim() → 'hi'`      |
+| `trimStart()`   | Remove space at start            | `' hi'.trimStart()`         |
+| `trimEnd()`     | Remove space at end              | `'hi '.trimEnd()`           |
+| `toString()`    | Converts to string (from object) | `num.toString()`            |
+
+🟠2. Search & Check**
+
+| Method               | Description                 | Example                          |
+| -------------------- | --------------------------- | -------------------------------- |
+| `includes(value)`    | Checks if substring exists  | `'hello'.includes('ell') → true` |
+| `startsWith(value)`  | Checks if starts with value | `'hi'.startsWith('h') → true`    |
+| `endsWith(value)`    | Checks if ends with value   | `'hi'.endsWith('i') → true`      |
+| `indexOf(value)`     | First index of substring    | `'hello'.indexOf('l') → 2`       |
+| `lastIndexOf(value)` | Last index of substring     | `'hello'.lastIndexOf('l') → 3`   |
+
+🔵3. Extract & Slice**
+
+| Method                  | Description                      | Example                           |
+| ----------------------- | -------------------------------- | --------------------------------- |
+| `slice(start, end?)`    | Extract part of string           | `'hello'.slice(1, 3) → 'el'`      |
+| `substring(start, end)` | Similar to `slice()`             | `'hello'.substring(1, 4) → 'ell'` |
+| `substr(start, len)`    | (Deprecated) Extract with length | `'hello'.substr(1, 2) → 'el'`     |
+
+🟣4. Modify & Replace**
+
+| Method                 | Description            | Example                                |
+| ---------------------- | ---------------------- | -------------------------------------- |
+| `replace(old, new)`    | Replaces first match   | `'aabb'.replace('a', 'x') → 'xabb'`    |
+| `replaceAll(old, new)` | Replaces all matches   | `'aabb'.replaceAll('a', 'x') → 'xxbb'` |
+| `repeat(n)`            | Repeats string n times | `'ha'.repeat(3) → 'hahaha'`            |
+| `padStart(len, str)`   | Pads from start        | `'5'.padStart(3, '0') → '005'`         |
+| `padEnd(len, str)`     | Pads from end          | `'5'.padEnd(3, '0') → '500'`           |
+
+
+
+🟤5. Split & Match**
+
+| Method             | Description                         | Example                              |
+| ------------------ | ----------------------------------- | ------------------------------------ |
+| `split(separator)` | Splits string into array            | `'a,b,c'.split(',') → ['a','b','c']` |
+| `match(regex)`     | Matches regex pattern               | `'abc'.match(/[a-z]/g)`              |
+| `matchAll(regex)`  | Returns all matches (with iterator) | `'test'.matchAll(/t/g)`              |
+| `search(regex)`    | Searches by pattern, returns index  | `'abc'.search(/b/) → 1`              |
+| `join(separator)   |  Join characters with a separator   | const word = "JAVASCRIPT";
+                                                             console.log(word.split('').join('-'));  
+                                                             // "J-A-V-A-S-C-R-I-P-T"
+  
+🟥6. Others**
+
+| Method               | Description                                              |
+| -------------------- | -------------------------------------------------------- |
+| `localeCompare(str)` | Compares strings in locale-sensitive way                 |
+| `normalize()`        | Unicode normalization                                    |
+| `valueOf()`          | Returns the primitive string value                       |
+| `constructor`        | Returns the function that created the string's prototype |
+

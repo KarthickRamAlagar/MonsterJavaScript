@@ -1,0 +1,63 @@
+// Primitive data types
+//Nubers
+// represents - integers, float,NaN, Infinity -all are type of number
+
+let age = 25;           // Integer
+let pi = 3.14;          // Float
+let negative = -10;     // Negative number
+let large = 1e6;        // Scientific notation (1 million)
+let result = 10 / 0;    // Infinity
+let invalid = "abc" / 2; // NaN (Not a Number)
+
+// Type Check
+console.log(typeof 42);     // "number"
+console.log(typeof NaN);    // "number" (Yes, NaN is a number!)
+console.log(typeof Infinity); // "number"
+
+//  Special Numeric Values
+/*
+| Value       | Description                        |
+| ----------- | ---------------------------------- |
+| `NaN`       | "Not a Number" (invalid operation) |
+| `Infinity`  | Larger than any number             |
+| `-Infinity` | Smaller than any number            |
+
+*/
+
+console.log(0 / 0);       // NaN
+console.log(10 / 0);      // Infinity
+console.log(-1 / 0);      // -Infinity
+
+// Built in number methods
+let n = 42.567;
+
+console.log(n.toFixed(2));     // "42.57" → rounds to 2 decimal places
+console.log(n.toString(2));     // "42.567"
+console.log(Number.isNaN(n));  // false
+console.log(Number.isInteger(n)); // false
+
+
+// number methods
+/*
+| Method / Property          | Description                                                          | Example & Output                                                         |
+| -------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `toFixed(digits)`          | Formats a number to fixed decimal places                             | `(3.14159).toFixed(2)` → `"3.14"`                                        |
+| `toPrecision(digits)`      | Formats a number to total digits (precision)                         | `(3.14159).toPrecision(4)` → `"3.142"`                                   |
+| `toExponential(digits)`    | Converts number to exponential notation                              | `(123456).toExponential(2)` → `"1.23e+5"`                                |
+| `toString(base)`           | Converts number to string in given base (2 = binary, 16 = hex, etc.) | `(10).toString(2)` → `"1010"`<br>`(255).toString(16)` → `"ff"`           |
+| `valueOf()`                | Gets the primitive number value                                      | `(42).valueOf()` → `42`                                                  |
+| `Number.isFinite(value)`   | Checks if value is finite (not `Infinity` or `NaN`)                  | `Number.isFinite(100)` → `true`<br>`Number.isFinite(Infinity)` → `false` |
+| `Number.isInteger(value)`  | Checks if value is an integer                                        | `Number.isInteger(5)` → `true`<br>`Number.isInteger(5.5)` → `false`      |
+| `Number.isNaN(value)`      | Checks if value is `NaN`                                             | `Number.isNaN(NaN)` → `true`<br>`Number.isNaN("abc")` → `false`          |
+| `Number.isSafeInteger(v)`  | Checks if value is safe integer (`±(2^53 - 1)`)                      | `Number.isSafeInteger(9007199254740991)` → `true`                        |
+| `Number.parseInt(str)`     | Parses string to integer (base 10 by default)                        | `Number.parseInt("42px")` → `42`                                         |
+| `Number.parseFloat(str)`   | Parses string to float                                               | `Number.parseFloat("3.14rem")` → `3.14`                                  |
+| `Number.EPSILON`           | Smallest diff between 2 representable numbers                        | `Number.EPSILON` → `2.220446049250313e-16`                               |
+| `Number.MAX_VALUE`         | Largest number JS can represent                                      | `Number.MAX_VALUE` → `1.7976931348623157e+308`                           |
+| `Number.MIN_VALUE`         | Smallest positive number > 0                                         | `Number.MIN_VALUE` → `5e-324`                                            |
+| `Number.MAX_SAFE_INTEGER`  | Max safe int without precision issues                                | `Number.MAX_SAFE_INTEGER` → `9007199254740991`                           |
+| `Number.MIN_SAFE_INTEGER`  | Min safe int without precision issues                                | `Number.MIN_SAFE_INTEGER` → `-9007199254740991`                          |
+| `Number.POSITIVE_INFINITY` | Represents +Infinity                                                 | `Number.POSITIVE_INFINITY` → `Infinity`                                  |
+| `Number.NEGATIVE_INFINITY` | Represents -Infinity                                                 | `Number.NEGATIVE_INFINITY` → `-Infinity`                                 |
+| `Number.NaN`               | Represents Not-a-Number constant                                     | `Number.NaN` → `NaN`                                                     |
+*/

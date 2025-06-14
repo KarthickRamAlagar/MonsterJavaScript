@@ -1,0 +1,60 @@
+
+## 🧠 What is an Array?
+
+An **array** is a special variable in JavaScript that can hold multiple values (elements) in a single variable.
+let fruits = ["apple", "banana", "cherry"];
+* Index starts from `0`
+* Can contain **mixed types** (strings, numbers, objects, etc.)
+
+## 🧰 Array Creation
+let arr1 = [1, 2, 3];             // Literal
+let arr2 = new Array(4, 5, 6);    // Constructor
+let empty = new Array(3);         // Creates array of 3 empty slots
+
+## 🔁 Looping through Arrays
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+## 📚 Common Built-in Array Methods (Pre-ES6)
+
+### ✅ 1. **Adding / Removing Elements**
+
+| Method      | Description                     | Example                |
+| ----------- | ------------------------------- | ---------------------- |
+| `push()`    | Adds item at **end**            | `arr.push("grape")`    |
+| `pop()`     | Removes item from **end**       | `arr.pop()`            |
+| `unshift()` | Adds item at **beginning**      | `arr.unshift("mango")` |
+| `shift()`   | Removes item from **beginning** | `arr.shift()`          |
+
+---
+
+### ✅ 2. **Accessing / Searching**
+
+| Method          | Description                  | Example                     |
+| --------------- | ---------------------------- | --------------------------- |
+| `indexOf()`     | Returns index of first match | `arr.indexOf("banana")`     |
+| `lastIndexOf()` | Returns index of last match  | `arr.lastIndexOf("banana")` |
+| `includes()`    | Checks if value exists       | `arr.includes("apple")`     |
+
+
+### ✅ 3. **Modifying / Slicing**
+
+| Method       | Description                              | Example                |
+| ------------ | ---------------------------------------- | ---------------------- |
+| `splice()`   | Adds/removes/replaces items (in-place)   | `arr.splice(1, 2)`     |
+| `slice()`    | Returns a shallow copy                   | `arr.slice(0, 2)`      |
+| `reverse()`  | Reverses array in place                  | `arr.reverse()`        |
+| `sort()`     | Sorts array (as strings by default)      | `arr.sort()`           |
+| `concat()`   | Combines arrays                          | `arr.concat(otherArr)` |
+| `join()`     | Joins elements into string               | `arr.join(", ")`       |
+| `toString()` | Converts array to comma-separated string | `arr.toString()`       |
+
+
+### ✅ 4. **Length & Type**
+
+| Method / Property | Description                 | Example              |
+| ----------------- | --------------------------- | -------------------- |
+| `length`          | Number of elements in array | `arr.length`         |
+| `Array.isArray()` | Checks if value is an array | `Array.isArray(arr)` |
+
