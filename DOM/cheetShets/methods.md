@@ -215,3 +215,231 @@ h1.classList.toggle("apple");
 </body>
 </html>
 ```
+# 🧩 DOM Traversal Methods: Parent, Children, and Siblings
+
+---
+
+## 1. Getting the Parent Element
+
+**Method:**  
+- `.parentElement`
+
+**Example:**
+```javascript
+const child = document.querySelector("li");
+const parent = child.parentElement;
+console.log(parent); // The <ul> element
+```
+---
+
+## 2. Getting All Children Elements
+
+**Method:**  
+- `.children` (returns an HTMLCollection of child elements)
+
+**Example:**
+```javascript
+const parent = document.querySelector("ul");
+const children = parent.children;
+console.log(children); // HTMLCollection of <li> elements
+
+// To loop through children:
+Array.from(children).forEach((child, index) => {
+    console.log(`Child ${index}:`, child);
+});
+```
+---
+
+## 3. Getting Sibling Elements
+
+**Methods:**  
+- `.nextElementSibling` (next sibling element)
+- `.previousElementSibling` (previous sibling element)
+
+**Example:**
+```javascript
+const firstLi = document.querySelector("li");
+
+// Next sibling
+const nextSibling = firstLi.nextElementSibling;
+console.log(nextSibling);
+
+// Previous sibling (if not the first child)
+const prevSibling = firstLi.previousElementSibling;
+console.log(prevSibling);
+
+// Loop through all next siblings
+let sibling = firstLi.nextElementSibling;
+let index = 0;
+while (sibling) {
+    console.log(`Sibling ${index}:`, sibling);
+    sibling = sibling.nextElementSibling;
+    index++;
+}
+```
+---
+
+**Summary Table**
+
+| Purpose         | Property/Method           | Description                                 |
+|-----------------|--------------------------|---------------------------------------------|
+| Get parent      | `.parentElement`         | Returns the parent element                  |
+| Get children    | `.children`              | Returns all child elements (HTMLCollection) |
+| Next sibling    | `.nextElementSibling`    | Returns the next sibling element            |
+| Previous sibling| `.previousElementSibling`| Returns the previous sibling element        |
+
+---
+# 🏗️ DOM Element Creation & Manipulation Methods
+
+---
+
+## 1. `createElement()`
+
+**Definition:**  
+Creates a new element node.
+
+**Syntax:**
+```javascript
+document.createElement('tagName')
+```
+
+**Example:**
+```javascript
+const h1 = document.createElement('h1');
+h1.textContent = 'hello World';
+console.log(h1); // <h1>hello World</h1>
+```
+---
+
+## 2. `appendChild()`
+
+**Definition:**  
+Appends a node as the last child of a parent node.
+
+**Syntax:**
+```javascript
+parent.appendChild(child)
+```
+
+**Example:**
+```javascript
+document.body.appendChild(h1);
+```
+---
+
+## 3. `append()`
+
+**Definition:**  
+Appends one or more nodes or strings as children of a parent node.
+
+**Syntax:**
+```javascript
+parent.append(node1, node2, ...);
+```
+
+**Example:**
+```javascript
+const section = document.querySelector('section');
+const i11 = document.createElement('i');
+const H4 = document.createElement('h4');
+i11.innerText = "i'm italics";
+H4.textContent = 'karthickRamAlagar';
+section.append(i11, H4);
+```
+---
+
+## 4. `prepend()`
+
+**Definition:**  
+Inserts one or more nodes or strings as the first children of a parent node.
+
+**Syntax:**
+```javascript
+parent.prepend(node1, node2, ...);
+```
+
+**Example:**
+```javascript
+const sections = document.querySelector('section');
+const i1 = document.createElement('i');
+const g4 = document.createElement('h4');
+i1.innerText = "i'm italics";
+g4.textContent = 'karthickRamAlagar';
+sections.prepend(i1, g4);
+```
+---
+
+## 5. `insertBefore()`
+
+**Definition:**  
+Inserts a node before a reference node as a child of a specified parent node.
+
+**Syntax:**
+```javascript
+parent.insertBefore(newNode, referenceNode);
+```
+
+**Example:**
+```javascript
+const ul = document.querySelector('ul');
+const newLi = document.createElement('li');
+newLi.innerText = "i'm li tag";
+ul.appendChild(newLi); // Add to end first
+const firstLi = document.querySelector('li');
+ul.insertBefore(newLi, firstLi); // Move to first position
+```
+---
+
+## 6. `insertAdjacentElement()`
+
+**Definition:**  
+Inserts a node at a specified position relative to the element.
+
+**Syntax:**
+```javascript
+element.insertAdjacentElement(position, node);
+```
+- Positions: `'beforebegin'`, `'afterbegin'`, `'beforeend'`, `'afterend'`
+
+**Example:**
+```javascript
+const firstP = document.querySelector('p');
+const i = document.createElement('i');
+i.innerText = "i'm italics";
+firstP.insertAdjacentElement('beforebegin', i);
+```
+---
+
+## 7. `removeChild()`
+
+**Definition:**  
+Removes a child node from the parent node.
+
+**Syntax:**
+```javascript
+parent.removeChild(child);
+```
+
+**Example:**
+```javascript
+const newList = document.querySelector('.new-list');
+const third = document.querySelector('.third');
+newList.removeChild(third);
+```
+---
+
+## 8. `remove()`
+
+**Definition:**  
+Removes the element from the DOM.
+
+**Syntax:**
+```javascript
+element.remove();
+```
+
+**Example:**
+```javascript
+newList.remove();
+```
+---

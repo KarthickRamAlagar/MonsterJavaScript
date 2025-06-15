@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Through DOM</title>
+    <style>
+        h1{
+            color:crimson
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hello World</h1>
+        <p>Hello this is computer and these dom part and the styles are applying from the js part </p>
+        <button>Hello</button>
+    </div>
+    <script>
+const body =document.querySelector("body");
+const div= document.querySelector("div");
+const h1=document.querySelector("h1");
+const p =document.querySelector("p");
+const button = document.querySelector("button");
+
+// adding class to the div , button 
+const container = div.classList.add("container");
+const btn= button.classList.add("btn");
+ 
+// styling 
+// give 400 px height to the container 
+console.log(div.style.height="400px");
+console.log(div.style.backgroundColor="teal")
+console.log(h1.style.color="skyblue")
+console.log(body.style.fontFamily="sans-serif") 
+console.log(p.style.color="white")
+console.log(button.style.color="pink")
+//div.classList.add("container") and button.classList.add("btn") do not return the element—they return undefined.
+//So, container and btn are undefined, which causes the .style error
+    </script>
+</body>
+</html>

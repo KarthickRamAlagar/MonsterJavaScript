@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibilings</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="fivth">5</li>
+    </ul>
+    <script>
+        const firstLi = document.querySelector("li");
+        const parent = document.querySelector("ul");
+          
+// getting parents from the children 
+        console.log("the 1level above parent :", firstLi.parentElement)
+         console.log("the 2level above parent :", firstLi.parentElement.parentElement)
+          console.log("the 3level above parent :", firstLi.parentElement.parentElement)
+           console.log("the 4level above parent :", firstLi.parentElement.parentElement.parentElement)
+            console.log("the 5level above parent :", firstLi.parentElement.parentElement.parentElement.parentElement)
+// getting children from the parent 
+       console.log("the parent element is :" ,parent)
+      Array.from(parent.children).forEach((child, index) => {
+    console.log(`The ${index} number of child and I am :`, child.innerText);
+});
+// parent.children gives you all child elements of a DOM node as an HTMLCollection.
+// getting the sibilings 
+let sibling = firstLi.nextElementSibling;
+let index = 0;
+while (sibling) {
+    console.log(`The ${index} number of sibling and I am :`, sibling.innerText);
+    sibling = sibling.nextElementSibling;
+    index++;
+}
+// there are another methods like previoueElementSibling
+    </script>
+</body>
+</html>
