@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT|EVENTS</title>
+  </head>
+  <body>
+    <!-- js Ew=vents  is an interaction with html is handled through events that occur whem the user or the browser manipulates the page  like
+     when page loads, it is called events , user clicks button  -->
+
+    <!-- WAY 1 INLINE(BADWAY) -->
+    <button onclick="alert('hey hi')">Click Me</button>
+    <!-- Bad Way 2 -->
+    <button class="second-btn">Learn More</button>
+    <!-- Great Way -->
+    <button class="best">Best Way</button>
+    
+    <!-- Event Object -->
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam recusandae, laudantium fugiat architecto aliquid voluptatibus a saepe mag</p>
+<form class="form">
+    <input  id="input1"type="text" >
+    <button>Submit</button>
+</form>
+    <script>
+    // Way 2(bad Way)
+const SecondBtn = document.querySelector(".second-btn")
+SecondBtn.onclick = function(){
+    console.log("Karthick")
+}
+// best wat
+const best = document.querySelector(".best")
+best.addEventListener("click", function(){
+    alert("hi")
+})
+
+best.addEventListener("click",(()=>{
+    console.log("the best way for event")
+}))
+
+// event Objects
+const para = document.querySelector(".para")
+para.addEventListener("click",((e)=>{
+    console.log(e)
+}))
+const form = document.querySelector(".form")
+form.addEventListener("submit",((e)=>{
+    e.preventDefault();
+    console.log(e)
+}))
+
+
+    </script>
+  </body>
+</html>

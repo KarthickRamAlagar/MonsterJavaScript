@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Events</title>
+  </head>
+  <body>
+    <input type="text" />
+
+    <script>
+    
+
+const input = document.querySelector("input");
+
+input.addEventListener("keypress", function () {
+  console.log("Key pressed");
+});
+
+input.addEventListener("keyup", function () {
+  console.log("keyup");
+});
+
+input.addEventListener("keydown", function () {
+  console.log("Keydown");
+});
+
+// ------- USEFULL PROPERTIES AND METHODS -------
+input.addEventListener("keypress", (e) => {
+  console.log(e.charCode);// eg a=95
+  console.log(e.code);// key a
+  console.log(e.ctrlKey); // shit ctr + q
+  console.log(e.key);
+  console.log(e.shiftKey); // shift + t
+});
+    </script>
+  </body>
+</html>
