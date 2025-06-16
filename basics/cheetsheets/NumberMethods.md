@@ -270,4 +270,4 @@ Number.NaN; // NaN
 
 ---
 
-Let me know if you want similar cheatsheets for other JS data types like `Boolean`, `Object`, or `Array`!
+
