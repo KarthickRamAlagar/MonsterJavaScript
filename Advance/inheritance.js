@@ -44,3 +44,6 @@ const lion1 =new Lion('Mufassa','ManLion')
 
 //now lion can access all the methods and property of the Animal object
 console.log(lion1.sound())
+
+
+//es6 v is class concept with super and constructor class
