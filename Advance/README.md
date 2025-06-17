@@ -168,3 +168,74 @@ Explore the code to see how constructor functions help create multiple objects w
 | Flexibility            | Can return any type of object, more flexible            | Always returns an instance of the constructor        |
 | Inheritance            | Uses composition or Object.create for inheritance       | Uses prototypes for inheritance                      |
 | Prototype Link         | Not linked to a prototype by default                    | Linked to the constructor's prototype                |
+
+---
+
+ ##  🏗️JavaScript Inheritance: Object.create() vs super in Classes
+JavaScript supports two main styles of inheritance:
+✨ Prototypal inheritance (using Object.create())
+✨ Class-based inheritance (using class and super)
+
+Both allow objects to share properties and methods, but their syntax and usage diffe
+---
+## 🧬 Prototypal Inheritance (Object.create())
+🛠️ Uses constructor functions and prototypes.
+🔗 Child’s prototype is set to an object created from the parent’s prototype.
+📚 Methods are shared via the prototype chain.
+📝 More manual and flexible, but can be verbose.
+---
+## 🏷️ Class-based Inheritance (super)
+- 🚀 Introduced in ES6 with the class syntax.
+- 🧩 Uses extends to inherit from a parent class.
+- 🏗️ super() is called in the child constructor to initialize the parent’s properties.
+- ✨ Cleaner, more familiar syntax for developers from other OOP languages
+---
+
+## Prototypal Inheritance
+```
+function Animal(name) {
+  this.name = name;
+}
+Animal.prototype.sound = function () {
+  return 'Animal Sound';
+};
+
+function Lion(name, breed) {
+  Animal.call(this, name);
+  this.breed = breed;
+}
+Lion.prototype = Object.create(Animal.prototype);
+
+const lion1 = new Lion('Mufasa', 'ManLion');
+console.log(lion1.sound()); // Animal Sound
+```
+## Class-based Inheritance
+```
+class Parent {
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+  greet() {
+    return `hi there ${this.firstName} ${this.lastName}`;
+  }
+}
+
+class Children extends Parent {
+  constructor(firstName, lastName, age, pl, experience) {
+    super(firstName, lastName, age);
+    this.pl = pl;
+    this.experience = experience;
+  }
+}
+
+const child1 = new Children('Ram', 'Alagar', 'infinity', 'all', 'infinity');
+console.log(child1.greet()); // hi there Ram Alagar
+```
+
+📝 Summary
+---
+- 🧬 Use prototypal inheritance for fine-grained prototype control or legacy code
+- 🏷️ Use class-based inheritance for modern, readable, and maintainable code
+---
