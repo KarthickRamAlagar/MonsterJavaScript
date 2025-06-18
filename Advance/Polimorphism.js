@@ -35,9 +35,11 @@ function animalInfo (animal){
     console.log(`name : ${animal.name} , sound:${animal.makeSound()}`)
 }
 // creating instances for the Animal Parent Class
-const genericAnimal = new Animal ('generic Animal');
-const dog = new Dog("Buddy")
-animalInfo(dog);
+const genericAnimal = new Animal ('generic Animal');// instance for parent class
+const dog = new Dog("Buddy")// instance for child class
+animalInfo(dog);// passing that child refernce to the another function as argument
+
+
 
 // ------------------- Define
 // In this example, we have a superclass Animal with a constructor that initializes the name property and a method makeSound() that returns "Unknown sound" by default.

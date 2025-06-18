@@ -1,6 +1,6 @@
 // classes are one of the features in es6
 // a class is a blueprint for the object  , you create the object from the class
-//class -> sketch of a house , it contains all the details about floors, doors, .Based on these description , you build the house
+// class -> sketch of a house , it contains all the details about floors, doors, .Based on these description , you build the house
 // since many houses can be made from the same description , we can create many objects from a class
 
 // class declaration

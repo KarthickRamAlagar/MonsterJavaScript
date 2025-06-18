@@ -1,4 +1,4 @@
-// 4 pillars
+// 4 pillars of OOPs 
 // 1. encapsulation
 // 2.Abstraction
 // 3.Inheritance
@@ -8,7 +8,7 @@
 // it can be acheived by clousers or symbols
 
 function Counter () {
-  let _count = 0 //private ariable
+  let _count = 0 //private variable
   //public method that can be access and modify the private variable
   this.increment = function () {
     return _count++
