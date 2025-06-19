@@ -58,7 +58,7 @@ const GITHUB_API ="https://api.github.com/users/karthickramalagar"
     })
  })
 
- // in promise 
+ // in promise chain
  createOrder(cart)
  .then(function(orderId){
     return proceedToPayment(orderId)
